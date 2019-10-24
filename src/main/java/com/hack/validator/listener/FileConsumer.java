@@ -20,6 +20,7 @@ public class FileConsumer {
         if (duplicator.isDuplicated(file)) {
             return null;
         }
+        duplicator.push();
         return file;
     }
 

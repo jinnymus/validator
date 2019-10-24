@@ -3,20 +3,22 @@ spring:
   kafka:
     bootstrap-servers: 45.12.236.20:9093,45.12.236.21:9093,45.12.236.34:9093
     client-id: ${random.uuid}
-    group.id: team3developer1
+    group.id: team3developer7
     consumer:
-      group.id: team3developer1
+      group.id: team3developer7
   cloud:
     stream:
       bindings:
         input:
           destination: input
           content-type: application/text
-          group: team3developer1
+          group: team3developer7
           concurrency: 15
         output:
           destination: team3-test-output
           content-type: text/plain
+          partitioned: true
+          partition-count: 30
       kafka:
         binder:
           configuration:
@@ -30,10 +32,10 @@ spring:
             ssl.endpoint.identification.algorithm:
           producer-properties:
            # key.serializer: org.apache.kafka.common.serialization.StringSerializer
-            key.serializer: com.hack.validator.serializer.JavaSerializer
+            #key.serializer: com.hack.validator.serializer.JavaSerializer
             key.serializer.encoding: UTF8
             value.serializer: com.hack.validator.serializer.JavaSerializer
           consumer-properties:
             key.deserializer: org.apache.kafka.common.serialization.StringDeserializer
             value.deserializer: org.apache.kafka.common.serialization.StringDeserializer
-            group.id: team3developer1
+            group.id: team3developer7
