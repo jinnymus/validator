@@ -1,0 +1,425 @@
+Index: validator/src/main/resources/property.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- validator/src/main/resources/property.properties	(date 1571919978563)
++++ validator/src/main/resources/property.properties	(date 1571919978563)
+@@ -0,0 +1,5 @@
++redis.host=localhost
++redis.port=6379
++
++prometheus.host=localhost
++prometheus.port=9181
+\ No newline at end of file
+Index: liba2/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\"\n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd\">\n    <modelVersion>4.0.0</modelVersion>\n\n    <groupId>org.liba2</groupId>\n    <artifactId>liba2</artifactId>\n    <version>1.0-SNAPSHOT</version>\n\n    <properties>\n        <java.version>13</java.version>\n\n        <maven.compiler.source>13</maven.compiler.source>\n        <maven.compiler.target>13</maven.compiler.target>\n\n        <logback.version>1.2.3</logback.version>\n        <prometheus.version>0.8.0</prometheus.version>\n    </properties>\n\n    <dependencies>\n        <dependency>\n            <groupId>net.openhft</groupId>\n            <artifactId>zero-allocation-hashing</artifactId>\n            <version>0.9</version>\n        </dependency>\n\n        <dependency>\n            <groupId>junit</groupId>\n            <artifactId>junit</artifactId>\n            <version>4.12</version>\n            <scope>test</scope>\n        </dependency>\n\n        <dependency>\n            <groupId>redis.clients</groupId>\n            <artifactId>jedis</artifactId>\n            <version>3.1.0</version>\n            <type>jar</type>\n            <scope>compile</scope>\n        </dependency>\n\n        <dependency>\n            <groupId>io.prometheus</groupId>\n            <artifactId>simpleclient</artifactId>\n            <version>${prometheus.version}</version>\n        </dependency>\n        <dependency>\n            <groupId>io.prometheus</groupId>\n            <artifactId>simpleclient_dropwizard</artifactId>\n            <version>${prometheus.version}</version>\n        </dependency>\n        <dependency>\n            <groupId>io.prometheus</groupId>\n            <artifactId>simpleclient_servlet</artifactId>\n            <version>${prometheus.version}</version>\n        </dependency>\n\n        <dependency>\n            <groupId>io.dropwizard</groupId>\n            <artifactId>dropwizard-core</artifactId>\n            <version>${prometheus.version}</version>\n        </dependency>\n\n<!--        <dependency>-->\n<!--            <groupId>ch.qos.logback</groupId>-->\n<!--            <artifactId>logback-classic</artifactId>-->\n<!--            <version>${logback.version}</version>-->\n<!--        </dependency>-->\n<!--        <dependency>-->\n<!--            <groupId>ch.qos.logback</groupId>-->\n<!--            <artifactId>logback-core</artifactId>-->\n<!--            <version>${logback.version}</version>-->\n<!--        </dependency>-->\n<!--        <dependency>-->\n<!--            <groupId>ch.qos.logback</groupId>-->\n<!--            <artifactId>logback-access</artifactId>-->\n<!--            <version>${logback.version}</version>-->\n<!--        </dependency>-->\n\n    </dependencies>\n\n    <build>\n        <plugins>\n            <plugin>\n                <groupId>org.apache.maven.plugins</groupId>\n                <artifactId>maven-compiler-plugin</artifactId>\n                <version>3.8.1</version>\n                <configuration>\n                    <source>13</source>\n                    <target>13</target>\n                </configuration>\n            </plugin>\n        </plugins>\n    </build>\n\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- liba2/pom.xml	(revision ebb37c326084d03ac73c3d4462edf39bc8056d23)
++++ liba2/pom.xml	(date 1571921817008)
+@@ -9,10 +9,10 @@
+     <version>1.0-SNAPSHOT</version>
+ 
+     <properties>
+-        <java.version>13</java.version>
++        <java.version>11</java.version>
+ 
+-        <maven.compiler.source>13</maven.compiler.source>
+-        <maven.compiler.target>13</maven.compiler.target>
++        <maven.compiler.source>11</maven.compiler.source>
++        <maven.compiler.target>11</maven.compiler.target>
+ 
+         <logback.version>1.2.3</logback.version>
+         <prometheus.version>0.8.0</prometheus.version>
+@@ -87,8 +87,8 @@
+                 <artifactId>maven-compiler-plugin</artifactId>
+                 <version>3.8.1</version>
+                 <configuration>
+-                    <source>13</source>
+-                    <target>13</target>
++                    <source>11</source>
++                    <target>11</target>
+                 </configuration>
+             </plugin>
+         </plugins>
+Index: python/src/certificate.pem
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- python/src/certificate.pem	(date 1571930894517)
++++ python/src/certificate.pem	(date 1571930894517)
+@@ -0,0 +1,24 @@
++-----BEGIN CERTIFICATE-----
++MIIECDCCAfACCQC5hUZ2oApt9DANBgkqhkiG9w0BAQsFADBCMQswCQYDVQQGEwJS
++VTEPMA0GA1UECAwGTW9zY293MREwDwYDVQQKDAhTYmVyVGVjaDEPMA0GA1UEAwwG
++cm9vdGNhMB4XDTE5MTAyNDA4MjExNloXDTIxMDMxOTA4MjExNlowSjELMAkGA1UE
++BhMCUlUxDzANBgNVBAgMBk1vc2NvdzERMA8GA1UECgwIU2JlclRlY2gxFzAVBgNV
++BAMMDnRlYW0zZGV2ZWxvcGVyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC
++AQEA43aTuuqzCcDyg51krLe3TiXcBN5A4UuyWSmafqsGs/4PqO2QtU+ccGZMVLX7
++ay5o9SRIieMOnVIWrBwweJ97uBQoEESAgsxLx8khoMdgySDL5qeA9SgHenbbDY8+
++xViuUg8eEBMiT512VSYHHKeqGhcMEHSSuSI4dR1kpEMuLQUCXHAltNRz90+CxBIl
++blWaEy8smEvw++fTfRt8haPXrvRMrBOZf0zpUOFjFVwteVq9SPGnZTNkS122ZHow
++4mSrRR6mip8qtA3ZByetYhm/KivhF0wCPEFSRAccg4kaz2wfTmWOtaEqz0ekYRco
++J04qSOGWBWInPyc+G7uiP/doUQIDAQABMA0GCSqGSIb3DQEBCwUAA4ICAQCFyfo7
++K6hpouI5vBW3Y2976M1+M/+tVzUxPNthlPp9igOG9UeEKzGob0XFRyOwpkSRW2EY
++K2zi38/aqsh4kT+MfDjsowQeRawMjshDoyLBSJnfZeKS7Jfxu9epA5knHconNYWN
++Qlo+6+xqT83y0oadA9s2uAs5droAQ+q0ql2fOjgipDvfdEldvUOgtkYIELc31Xdt
++Kg+Dm4hFzSmL7lWzmcUvA8GMevdvtqVsb+1L4xhVP9TkRU3g83SfyocpYsCasHJU
++6kdoAcFW/NW14ekNf4Tjc/7DFTNA7dLZxXgo6cmQI/S7rW604runeKjZ7AyxVvpn
++Yb/YxWz05iM0AjAn8q0ja4E/lbF+T9jBzGEbjgQLrZu0iyun7m/9lhh93/pvnYQF
++R+kUfJanb4ugtjvHjbsAKowV8MRGdKdTw7oqWWac2lsM5fBpwO7xDVaA27FS5v4y
++Xk0mR04nGXAvCmEY9PpxiyEX0L6U9EV26deuKMxRg4NNTlJ5jnCpbrkopCrJjwR7
++fIdL/3F7YKx/7x7OgWYiuomyjeM84SzTWHIk0gOBq6+M61v1ub1zPKBkqKht9Cwp
++/NDDKSU42+E97Aa7UshzQMM1HLUDMjDJBWmQWx8dLvw4YskKKZcX6OWHhBqYNQaE
++qS2wX1oYaolpom7/9JIRaNksyhDGtL7lVh7fkw==
++-----END CERTIFICATE-----
+Index: python/src/CARoot.pem
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- python/src/CARoot.pem	(date 1571931135716)
++++ python/src/CARoot.pem	(date 1571931135716)
+@@ -0,0 +1,31 @@
++-----BEGIN CERTIFICATE-----
++MIIFVzCCAz+gAwIBAgIJAJiq/Q9guNlqMA0GCSqGSIb3DQEBCwUAMEIxCzAJBgNV
++BAYTAlJVMQ8wDQYDVQQIDAZNb3Njb3cxETAPBgNVBAoMCFNiZXJUZWNoMQ8wDQYD
++VQQDDAZyb290Y2EwHhcNMTkxMDI0MDgyMTEwWhcNMjIwODEzMDgyMTEwWjBCMQsw
++CQYDVQQGEwJSVTEPMA0GA1UECAwGTW9zY293MREwDwYDVQQKDAhTYmVyVGVjaDEP
++MA0GA1UEAwwGcm9vdGNhMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA
++tFIjn5ELpU/1VgrNT2Lqx0f4UHXHfDN6GXDsJW9xSOVNYYML4KLhII4BFo9zSxdK
++/klQ6kLOCeQwqcl30unV+2mom4B1lyFDu9KtS4fMkS4oPgJvunkYHThaxfI9dlYz
++/0T1GqqdF3bPvnalw62Y2yU30WG4tcWv5WtOdf9JX8FPcgCwe0+QMIORT56qcJWk
++vpGj9ajGjFjSdNhjYBnwdvhyGiHO8MqZEez8mzuAhLJXNro7X63R2PyPk82gc4fg
++T2Yk4if52OuJf9h5ydSFbf1X2A2XyJ/oKR8A2oR12isb3gfTTMisbOK/Z0nZQGEw
++Lr2GyJ2jjdpOD/S0jrcIpMEDJvLJ8SOFfkCkRX2hh+rnEO4/7L5eBhZN7NCcNtrV
++v54zlBu+qkElc7+nB0LmlzcAADLGTIKBkLo7MumYnr9wVClJI4xpAFS1Nqy0ApK8
++Q4Yr/0Iu8rpC1iEPAvtNrWjAtMQPTFBhBcoySHx9UhItkSCfrTWJBUC9pjcKGIV2
++Drjw9oxylgxpkuGXcibgsCaL2YWsNtquMlqD3Z4OKqZSQXapLLn6SvGrDudcV/8X
++tJX15QUv8zVdRcYmrOioBasI5kKgz3Q1JokceJe8883QJ+Z6v+PVojyz7lhERhYK
++nwQaoArk4+5irQ5YW5Zw+iT7j2mJ4E/raGEcVbUph28CAwEAAaNQME4wHQYDVR0O
++BBYEFPJXqdKdOSiL0Qrrjoy+pJfru9BXMB8GA1UdIwQYMBaAFPJXqdKdOSiL0Qrr
++joy+pJfru9BXMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQELBQADggIBABMiLouG
++clh2OIhSAl61n3yJnwFi8p0eUP6/O/3qocGaH8n11ZDfoH/zy3J3kXxOARp2kthb
++dGa9Df7Ge0pLE5/x5G3AtMBoVrgGwUUMW9J2PpC/ba11o583hyUwDcczQ/xXKFKo
++F540liZLluGJQfilMPUvN9UHYMU9IcmGVYcuWIdTHM5+r9LYJ8dIYt77uzmEQXTZ
++ndHOS5qLl/JqAPypGGAiq9xIBPG70aBhbpWl1asF0+jiXOx70/EOq0InHk1rXCKZ
++OJi56Dae4Jk68l28sUUwJe354jpWiqBNWspISfVGpfSmVzc+8W143sly9vO/W6Km
++i+FpqTeoqtCnySAEVFcrm1esm6CpUsqKIRstvw0PaLR41C7ATe/UqK9YmP5+qK3V
++YGTM6HCcKBB3oW01hDT98fRuIxT62zEsHAFtYcuKNeyrs+de3SgcR4k4e7Jn22B/
++9XEYsowvBkd/HuYuUPJ6BztZHvU+wi6w4m1pbR8Av9RuQzHM2K7Tbo/y2Ry4Otm7
++Feep7O1YkQaJVJjgc7mX5wVlWLU6R5GxYg85/KE6XVWp9O+GAgIECGj/oXpMkxBd
++PZP0em2PzOcfga4xxH8Cmv7N7jHw5R/XgVFh4ZsMg2YOWslyDp+pMq9xImXNr+rm
++lSKw2I2GeUbCWMcUOc2VaJWlxf3IbiEYvy2A
++-----END CERTIFICATE-----
+Index: validator/src/test/java/Test.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- validator/src/test/java/Test.java	(date 1571919978563)
++++ validator/src/test/java/Test.java	(date 1571919978563)
+@@ -0,0 +1,15 @@
++import org.liba2.Duplicator;
++
++import java.util.stream.IntStream;
++
++public class Test {
++
++    @org.junit.Test
++    public void test() {
++        Duplicator duplicator = new Duplicator();
++
++        IntStream.range(1, 10000)
++                .parallel()
++                .forEach(i -> duplicator.isDuplicated("sad"));
++    }
++}
+Index: python/src/key.pem
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- python/src/key.pem	(date 1571929355933)
++++ python/src/key.pem	(date 1571929355933)
+@@ -0,0 +1,28 @@
++-----BEGIN PRIVATE KEY-----
++MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDjdpO66rMJwPKD
++nWSst7dOJdwE3kDhS7JZKZp+qwaz/g+o7ZC1T5xwZkxUtftrLmj1JEiJ4w6dUhas
++HDB4n3u4FCgQRICCzEvHySGgx2DJIMvmp4D1KAd6dtsNjz7FWK5SDx4QEyJPnXZV
++Jgccp6oaFwwQdJK5Ijh1HWSkQy4tBQJccCW01HP3T4LEEiVuVZoTLyyYS/D759N9
++G3yFo9eu9EysE5l/TOlQ4WMVXC15Wr1I8adlM2RLXbZkejDiZKtFHqaKnyq0DdkH
++J61iGb8qK+EXTAI8QVJEBxyDiRrPbB9OZY61oSrPR6RhFygnTipI4ZYFYic/Jz4b
++u6I/92hRAgMBAAECggEAT1L/6/SDYYhnSpzuCgm7pEYxt4TmrWsflFac6UWtfcHB
++JlFK4OAVl2Elh3k7Z8J0meEAZw3G//grrfPat4YuuCBXZGzvQC4M02yCDLbbOuj0
++EskhgN1n1j5y4ASviFUH3dglzMdPdOJd7Q3o9wZFnPminG566JNViwooGdzP0qS/
++QTYxOmIKBxhIb9BzecIOhZ91MtVIbr+2+YKKsFrCpka5UlGvWWIGdtuB0RjOdskt
++bJ/HpKxnFRdlWBsqbkVwd150z5O/Ndd1v0Ue83LCrufeKhSKDrhTU/k0sgfnuo7x
++y6lXMu6PDIRlAHm3xjd+cN0sPvtd3PxrFK59dCmw7QKBgQDyw97OwPYxB66ILIeb
++AdG7J4z82eT8qH86O07rN4YDVD3BgLSfiaYu49Rt8h2KXDXYmB4tJo/070208K4x
++lovNE1DelUS7SR6FecZtqcTu2FRPwkFtepncuU6Pax82D95oWpuiWVY+MfN2lT32
++O9jn7mr1yWPDMNmRNYcnsjDSiwKBgQDv3SWRxio47phH6WZTEOJzBjmdkRmHnohK
++HnzTOXfL2jMAxM2LshfzPTBYZ+OQ++GJ/3/+O5daD5Zssl8VW4H2Qa001+v+yNkh
++aH8Na8Ofz8qsrK6BxI0JC4+Do5dWwjCBurTpY6HPoBoKJRFjS3Kyr0g1INAnlrIJ
++OnbPUOhYEwKBgFUglA/CIFJfFDeSDdcwEyBipRDBQ4fJehusUmcu6CJgtusUu8G5
++3flRUNtg7DTpUsRpyyMgA5jrFT+eqiafWNSHsnLquthFspsxcYBg6LqsRxxUzOab
+++DorDL5D3QTzGZVUOID8fL6Ae5QYj0q5/7yMoRshDIeUqKY/s+4akP4zAoGBAOQr
++lD91KFj77nQJvEKsPx14AHq4unZeAfuvwMIVWrXaHMZQb87BXTMPM9wFB161nDhv
++icvH2BPd3BQOIZDpeVlN5HvuIho96P50rtePeYmeWoejxGTBGgBOtPheN+pZ01a0
++yr9w/U3KWLrpw/6WmMcNIj0Xt6rRGQ7aRIa1yi9tAoGAQarWhD5jEtrbpIQBVsAr
++MLMBLYjcGTLE9f1yu7Yfgstnww0RHV795A27w6Mf49uu5YJF8ovRwXkfLh1LDX7+
++VTBdLxzpzmsCq5ufcdHfeaB3agy1HJn7oNqQTNYqpuPAI8/pJn7wCjWAuqGYJ+ph
++51Z6SIMyVVy0OkWqF+EYot0=
++-----END PRIVATE KEY-----
+\ No newline at end of file
+Index: python/bin/kafka_2.12-1.1.0/bin/kafka-run-class.sh
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#!/bin/bash\n# Licensed to the Apache Software Foundation (ASF) under one or more\n# contributor license agreements.  See the NOTICE file distributed with\n# this work for additional information regarding copyright ownership.\n# The ASF licenses this file to You under the Apache License, Version 2.0\n# (the \"License\"); you may not use this file except in compliance with\n# the License.  You may obtain a copy of the License at\n#\n#    http://www.apache.org/licenses/LICENSE-2.0\n#\n# Unless required by applicable law or agreed to in writing, software\n# distributed under the License is distributed on an \"AS IS\" BASIS,\n# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n# See the License for the specific language governing permissions and\n# limitations under the License.\n\nif [ $# -lt 1 ];\nthen\n  echo \"USAGE: $0 [-farming] [-name servicename] [-loggc] classname [opts]\"\n  exit 1\nfi\n\n# CYGINW == 1 if Cygwin is detected, else 0.\nif [[ $(uname -a) =~ \"CYGWIN\" ]]; then\n  CYGWIN=1\nelse\n  CYGWIN=0\nfi\n\nif [ -z \"$INCLUDE_TEST_JARS\" ]; then\n  INCLUDE_TEST_JARS=false\nfi\n\n# Exclude jars not necessary for running commands.\nregex=\"(-(test|src|scaladoc|javadoc)\\.jar|jar.asc)$\"\nshould_include_file() {\n  if [ \"$INCLUDE_TEST_JARS\" = true ]; then\n    return 0\n  fi\n  file=$1\n  if [ -z \"$(echo \"$file\" | egrep \"$regex\")\" ] ; then\n    return 0\n  else\n    return 1\n  fi\n}\n\nbase_dir=$(dirname $0)/..\n\nif [ -z \"$SCALA_VERSION\" ]; then\n  SCALA_VERSION=2.11.12\nfi\n\nif [ -z \"$SCALA_BINARY_VERSION\" ]; then\n  SCALA_BINARY_VERSION=$(echo $SCALA_VERSION | cut -f 1-2 -d '.')\nfi\n\n# run ./gradlew copyDependantLibs to get all dependant jars in a local dir\nshopt -s nullglob\nfor dir in \"$base_dir\"/core/build/dependant-libs-${SCALA_VERSION}*;\ndo\n  CLASSPATH=\"$CLASSPATH:$dir/*\"\ndone\n\nfor file in \"$base_dir\"/examples/build/libs/kafka-examples*.jar;\ndo\n  if should_include_file \"$file\"; then\n    CLASSPATH=\"$CLASSPATH\":\"$file\"\n  fi\ndone\n\nfor file in \"$base_dir\"/clients/build/libs/kafka-clients*.jar;\ndo\n  if should_include_file \"$file\"; then\n    CLASSPATH=\"$CLASSPATH\":\"$file\"\n  fi\ndone\n\nfor file in \"$base_dir\"/streams/build/libs/kafka-streams*.jar;\ndo\n  if should_include_file \"$file\"; then\n    CLASSPATH=\"$CLASSPATH\":\"$file\"\n  fi\ndone\n\nfor file in \"$base_dir\"/streams/examples/build/libs/kafka-streams-examples*.jar;\ndo\n  if should_include_file \"$file\"; then\n    CLASSPATH=\"$CLASSPATH\":\"$file\"\n  fi\ndone\n\nfor file in \"$base_dir\"/streams/build/dependant-libs-${SCALA_VERSION}/rocksdb*.jar;\ndo\n  CLASSPATH=\"$CLASSPATH\":\"$file\"\ndone\n\nfor file in \"$base_dir\"/tools/build/libs/kafka-tools*.jar;\ndo\n  if should_include_file \"$file\"; then\n    CLASSPATH=\"$CLASSPATH\":\"$file\"\n  fi\ndone\n\nfor dir in \"$base_dir\"/tools/build/dependant-libs-${SCALA_VERSION}*;\ndo\n  CLASSPATH=\"$CLASSPATH:$dir/*\"\ndone\n\nfor cc_pkg in \"api\" \"transforms\" \"runtime\" \"file\" \"json\" \"tools\"\ndo\n  for file in \"$base_dir\"/connect/${cc_pkg}/build/libs/connect-${cc_pkg}*.jar;\n  do\n    if should_include_file \"$file\"; then\n      CLASSPATH=\"$CLASSPATH\":\"$file\"\n    fi\n  done\n  if [ -d \"$base_dir/connect/${cc_pkg}/build/dependant-libs\" ] ; then\n    CLASSPATH=\"$CLASSPATH:$base_dir/connect/${cc_pkg}/build/dependant-libs/*\"\n  fi\ndone\n\n# classpath addition for release\nfor file in \"$base_dir\"/libs/*;\ndo\n  if should_include_file \"$file\"; then\n    CLASSPATH=\"$CLASSPATH\":\"$file\"\n  fi\ndone\n\nfor file in \"$base_dir\"/core/build/libs/kafka_${SCALA_BINARY_VERSION}*.jar;\ndo\n  if should_include_file \"$file\"; then\n    CLASSPATH=\"$CLASSPATH\":\"$file\"\n  fi\ndone\nshopt -u nullglob\n\nif [ -z \"$CLASSPATH\" ] ; then\n  echo \"Classpath is empty. Please build the project first e.g. by running './gradlew jar -PscalaVersion=$SCALA_VERSION'\"\n  exit 1\nfi\n\n# JMX settings\nif [ -z \"$KAFKA_JMX_OPTS\" ]; then\n  KAFKA_JMX_OPTS=\"-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false  -Dcom.sun.management.jmxremote.ssl=false \"\nfi\n\n# JMX port to use\nif [  $JMX_PORT ]; then\n  KAFKA_JMX_OPTS=\"$KAFKA_JMX_OPTS -Dcom.sun.management.jmxremote.port=$JMX_PORT \"\nfi\n\n# Log directory to use\nif [ \"x$LOG_DIR\" = \"x\" ]; then\n  LOG_DIR=\"$base_dir/logs\"\nfi\n\n# Log4j settings\nif [ -z \"$KAFKA_LOG4J_OPTS\" ]; then\n  # Log to console. This is a tool.\n  LOG4J_DIR=\"$base_dir/config/tools-log4j.properties\"\n  # If Cygwin is detected, LOG4J_DIR is converted to Windows format.\n  (( CYGWIN )) && LOG4J_DIR=$(cygpath --path --mixed \"${LOG4J_DIR}\")\n  KAFKA_LOG4J_OPTS=\"-Dlog4j.configuration=file:${LOG4J_DIR}\"\nelse\n  # create logs directory\n  if [ ! -d \"$LOG_DIR\" ]; then\n    mkdir -p \"$LOG_DIR\"\n  fi\nfi\n\n# If Cygwin is detected, LOG_DIR is converted to Windows format.\n(( CYGWIN )) && LOG_DIR=$(cygpath --path --mixed \"${LOG_DIR}\")\nKAFKA_LOG4J_OPTS=\"-Dkafka.logs.dir=$LOG_DIR $KAFKA_LOG4J_OPTS\"\n\n# Generic jvm settings you want to add\nif [ -z \"$KAFKA_OPTS\" ]; then\n  KAFKA_OPTS=\"\"\nfi\n\n# Set Debug options if enabled\nif [ \"x$KAFKA_DEBUG\" != \"x\" ]; then\n\n    # Use default ports\n    DEFAULT_JAVA_DEBUG_PORT=\"5005\"\n\n    if [ -z \"$JAVA_DEBUG_PORT\" ]; then\n        JAVA_DEBUG_PORT=\"$DEFAULT_JAVA_DEBUG_PORT\"\n    fi\n\n    # Use the defaults if JAVA_DEBUG_OPTS was not set\n    DEFAULT_JAVA_DEBUG_OPTS=\"-agentlib:jdwp=transport=dt_socket,server=y,suspend=${DEBUG_SUSPEND_FLAG:-n},address=$JAVA_DEBUG_PORT\"\n    if [ -z \"$JAVA_DEBUG_OPTS\" ]; then\n        JAVA_DEBUG_OPTS=\"$DEFAULT_JAVA_DEBUG_OPTS\"\n    fi\n\n    echo \"Enabling Java debug options: $JAVA_DEBUG_OPTS\"\n    KAFKA_OPTS=\"$JAVA_DEBUG_OPTS $KAFKA_OPTS\"\nfi\n\n# Which java to use\nif [ -z \"$JAVA_HOME\" ]; then\n  JAVA=\"java\"\nelse\n  JAVA=\"$JAVA_HOME/bin/java\"\nfi\n\n# Memory options\nif [ -z \"$KAFKA_HEAP_OPTS\" ]; then\n  KAFKA_HEAP_OPTS=\"-Xmx256M\"\nfi\n\n# JVM performance options\nif [ -z \"$KAFKA_JVM_PERFORMANCE_OPTS\" ]; then\n  KAFKA_JVM_PERFORMANCE_OPTS=\"-server -XX:+UseG1GC -XX:MaxGCPauseMillis=20 -XX:InitiatingHeapOccupancyPercent=35 -XX:+ExplicitGCInvokesConcurrent -Djava.awt.headless=true\"\nfi\n\n\nwhile [ $# -gt 0 ]; do\n  COMMAND=$1\n  case $COMMAND in\n    -name)\n      DAEMON_NAME=$2\n      CONSOLE_OUTPUT_FILE=$LOG_DIR/$DAEMON_NAME.out\n      shift 2\n      ;;\n    -loggc)\n      if [ -z \"$KAFKA_GC_LOG_OPTS\" ]; then\n        GC_LOG_ENABLED=\"true\"\n      fi\n      shift\n      ;;\n    -daemon)\n      DAEMON_MODE=\"true\"\n      shift\n      ;;\n    *)\n      break\n      ;;\n  esac\ndone\n\n# GC options\nGC_FILE_SUFFIX='-gc.log'\nGC_LOG_FILE_NAME=''\nif [ \"x$GC_LOG_ENABLED\" = \"xtrue\" ]; then\n  GC_LOG_FILE_NAME=$DAEMON_NAME$GC_FILE_SUFFIX\n  # the first segment of the version number, which is '1' for releases before Java 9\n  # it then becomes '9', '10', ...\n  JAVA_MAJOR_VERSION=$($JAVA -version 2>&1 | sed -E -n 's/.* version \"([^.-]*).*\"/\\1/p')\n  if [[ \"$JAVA_MAJOR_VERSION\" -ge \"9\" ]] ; then\n    KAFKA_GC_LOG_OPTS=\"-Xlog:gc*:file=$LOG_DIR/$GC_LOG_FILE_NAME:time,tags:filecount=10,filesize=102400\"\n  else\n    KAFKA_GC_LOG_OPTS=\"-Xloggc:$LOG_DIR/$GC_LOG_FILE_NAME -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=10 -XX:GCLogFileSize=100M\"\n  fi\nfi\n\n# Remove a possible colon prefix from the classpath (happens at lines like `CLASSPATH=\"$CLASSPATH:$file\"` when CLASSPATH is blank)\n# Syntax used on the right side is native Bash string manipulation; for more details see\n# http://tldp.org/LDP/abs/html/string-manipulation.html, specifically the section titled \"Substring Removal\"\nCLASSPATH=${CLASSPATH#:}\n\n# If Cygwin is detected, classpath is converted to Windows format.\n(( CYGWIN )) && CLASSPATH=$(cygpath --path --mixed \"${CLASSPATH}\")\n\n# Launch mode\nif [ \"x$DAEMON_MODE\" = \"xtrue\" ]; then\n  nohup $JAVA $KAFKA_HEAP_OPTS $KAFKA_JVM_PERFORMANCE_OPTS $KAFKA_GC_LOG_OPTS $KAFKA_JMX_OPTS $KAFKA_LOG4J_OPTS -cp $CLASSPATH $KAFKA_OPTS \"$@\" > \"$CONSOLE_OUTPUT_FILE\" 2>&1 < /dev/null &\nelse\n  exec $JAVA $KAFKA_HEAP_OPTS $KAFKA_JVM_PERFORMANCE_OPTS $KAFKA_GC_LOG_OPTS $KAFKA_JMX_OPTS $KAFKA_LOG4J_OPTS -cp $CLASSPATH $KAFKA_OPTS \"$@\"\nfi\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- python/bin/kafka_2.12-1.1.0/bin/kafka-run-class.sh	(revision ebb37c326084d03ac73c3d4462edf39bc8056d23)
++++ python/bin/kafka_2.12-1.1.0/bin/kafka-run-class.sh	(date 1571932066475)
+@@ -208,7 +208,7 @@
+ 
+ # Memory options
+ if [ -z "$KAFKA_HEAP_OPTS" ]; then
+-  KAFKA_HEAP_OPTS="-Xmx256M"
++  KAFKA_HEAP_OPTS="-Xmx1024M"
+ fi
+ 
+ # JVM performance options
+Index: docker-compose.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>version: \"3.0\"\n\nservices:\n\n\n  tests:\n    build:\n      context: ./python\n    volumes:\n      - ./python:/nis-test\n      #- ./tests/external:/nis-test/pytest/external\n      #- ./logs/tests:/nis-test/logs\n      #- ./logs:/logs\n    networks:\n      - nis_net\n\n  validator_1:\n    build:\n      context: validator\n   # volumes:\n     # - ./logs/generator:/tmp\n    networks:\n      - nis_net\n    depends_on:\n      - kafka1\n\n  validator_2:\n    build:\n      context: validator\n    #volumes:\n      #- ./logs/generator:/tmp\n    networks:\n      - nis_net\n    depends_on:\n      - kafka1\n\n#  schema-registry-ui:\n#    image: landoop/schema-registry-ui:latest\n#    hostname: kafka-schema-registry-ui\n#    ports:\n#      - \"8001:8000\"\n#    environment:\n#      SCHEMAREGISTRY_URL: http://kafka-schema-registry:8081/\n#      PROXY: \"true\"\n#    depends_on:\n#      - kafka-schema-registry\n\n  redis:\n    image: 'bitnami/redis:latest'\n    environment:\n      - REDIS_PASSWORD=redis123\n    container_name: redis\n    ports:\n      - \"6379:6379\"\n    volumes:\n      - ../data/redis:/data\n    restart: always\n    networks:\n      - nis_net\n\n  zoo1:\n    #image: confluentinc/cp-zookeeper:latest\n    image: wurstmeister/zookeeper:latest\n    restart: always\n    ports:\n      - \"2181:2181\"\n    environment:\n      ZOO_MY_ID: 1\n      ZOO_PORT: 2181\n      #ZOO_SERVERS: server.1=zoo1:2888:3888\n      ZOOKEEPER_SERVER_ID: 1\n      ZOOKEEPER_CLIENT_PORT: \"2181\"\n      ZOOKEEPER_TICK_TIME: \"2000\"\n      ZOOKEEPER_SERVERS: \"zoo1:22888:23888\"\n    networks:\n      - nis_net\n\n\n  kafka1:\n    #image: confluentinc/cp-kafka:latest\n    image: wurstmeister/kafka:latest\n    hostname: kafka1\n    ports:\n      - \"9092:9092\"\n    environment:\n      # add the entry \"127.0.0.1    kafka1\" to your /etc/hosts file\n      KAFKA_LISTENERS: \"PLAINTEXT://kafka1:9092\"\n      KAFKA_DELETE_TOPIC_ENABLE: \"true\"\n      #KAFKA_ADVERTISED_LISTENERS: \"PLAINTEXT://kafka1:9092\"\n      KAFKA_ZOOKEEPER_CONNECT: \"zoo1:2181\"\n      KAFKA_BROKER_ID: 1\n      KAFKA_LOG4J_LOGGERS: \"kafka.controller=INFO,kafka.producer.async.DefaultEventHandler=INFO,state.change.logger=INFO\"\n      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1\n#      KAFKA_SCHEMA_REGISTRY_URL: \"schemaregistry:8081\"\n      KAFKA_AUTO_CREATE_TOPICS_ENABLE: \"true\"\n      KAFKA_MESSAGE_MAX_BYTES: 150000000\n      KAFKA_FETCH_MESSAGE_MAX_BYTES: 15000000\n      KAFKA_REPLICA_FETCH_MAX_BYTES: 15000000\n      KAFKA_MAX_MESSAGE_BYTES: 15000000\n      KAFKA_NUM_PARTITIONS: 10\n      KAFKA_DEFAULT_REPLICATION_FACTOR: 3\n      KAFKA_CREATE_TOPICS: \"file-topic:10:1\"\n    volumes:\n      - ./full-stack/kafka1/data:/var/lib/kafka/data\n      - ./producer.properties:/etc/kafka/producer.properties\n    depends_on:\n      - zoo1\n    networks:\n      - nis_net\n\n  prometheus:\n    image: prom/prometheus:v2.1.0\n    volumes:\n      - ./prometheus/:/etc/prometheus/\n      - prometheus_data:/prometheus\n    command:\n      - '--config.file=/etc/prometheus/prometheus.yml'\n      - '--storage.tsdb.path=/prometheus'\n      - '--web.console.libraries=/usr/share/prometheus/console_libraries'\n      - '--web.console.templates=/usr/share/prometheus/consoles'\n    ports:\n      - 9090:9090\n    links:\n      - cadvisor:cadvisor\n      - alertmanager:alertmanager\n    depends_on:\n      - cadvisor\n    networks:\n      - back-tier\n    restart: always\n  #    deploy:\n  #      placement:\n  #        constraints:\n  #          - node.hostname == ${HOSTNAME}\n\n\n#  kafka-schema-registry:\n#    image: confluentinc/cp-schema-registry:latest\n#    restart: always\n#    depends_on:\n#      - zoo1\n#    environment:\n#      SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS: \"PLAINTEXT://kafka1:9092\"\n#      SCHEMA_REGISTRY_KAFKASTORE_CONNECTION_URL: \"zoo1:2181\"\n#      SCHEMA_REGISTRY_HOST_NAME: kafka-schema-registry\n#      SCHEMA_REGISTRY_LISTENERS: \"http://0.0.0.0:8081\"\n#      PROXY: \"true\"\n#    ports:\n#      - \"8081:8081\"\n#    networks:\n#      - nis_net\n\n  kafka-topics-ui:\n    image: landoop/kafka-topics-ui:latest\n    hostname: kafka-topics-ui\n    ports:\n      - \"8010:8000\"\n    environment:\n      KAFKA_REST_PROXY_URL: \"http://kafka-rest-proxy:8082/\"\n      PROXY: \"true\"\n    depends_on:\n      - zoo1\n      - kafka1\n    networks:\n      - nis_net\n\n  kafka-rest-proxy:\n    image: confluentinc/cp-kafka-rest:latest\n    hostname: kafka-rest-proxy\n    ports:\n      - \"8082:8082\"\n    environment:\n      KAFKA_REST_ZOOKEEPER_CONNECT: zoo1:2181\n      KAFKA_REST_LISTENERS: http://0.0.0.0:8082/\n#      KAFKA_REST_SCHEMA_REGISTRY_URL: http://kafka-schema-registry:8081/\n      KAFKA_REST_HOST_NAME: kafka-rest-proxy\n      KAFKA_REST_BOOTSTRAP_SERVERS: kafka1:9092\n    depends_on:\n      - zoo1\n      - kafka1\n    networks:\n      - nis_net\n\nnetworks:\n  nis_net:\n    driver: bridge\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- docker-compose.yml	(revision ebb37c326084d03ac73c3d4462edf39bc8056d23)
++++ docker-compose.yml	(date 1571921039613)
+@@ -108,30 +108,24 @@
+     networks:
+       - nis_net
+ 
+-  prometheus:
+-    image: prom/prometheus:v2.1.0
+-    volumes:
+-      - ./prometheus/:/etc/prometheus/
+-      - prometheus_data:/prometheus
+-    command:
+-      - '--config.file=/etc/prometheus/prometheus.yml'
+-      - '--storage.tsdb.path=/prometheus'
+-      - '--web.console.libraries=/usr/share/prometheus/console_libraries'
+-      - '--web.console.templates=/usr/share/prometheus/consoles'
+-    ports:
+-      - 9090:9090
+-    links:
+-      - cadvisor:cadvisor
+-      - alertmanager:alertmanager
+-    depends_on:
+-      - cadvisor
+-    networks:
+-      - back-tier
+-    restart: always
+-  #    deploy:
+-  #      placement:
+-  #        constraints:
+-  #          - node.hostname == ${HOSTNAME}
++#  prometheus:
++#    image: prom/prometheus:v2.1.0
++#    volumes:
++#      - ./prometheus/:/etc/prometheus/
++#      - prometheus_data:/prometheus
++#    command:
++#      - '--config.file=/etc/prometheus/prometheus.yml'
++#      - '--storage.tsdb.path=/prometheus'
++#      - '--web.console.libraries=/usr/share/prometheus/console_libraries'
++#      - '--web.console.templates=/usr/share/prometheus/consoles'
++#    ports:
++#      - 9090:9090
++#    links:
++#      - cadvisor:cadvisor
++#      - alertmanager:alertmanager
++#    networks:
++#      - nis_net
++#    restart: always
+ 
+ 
+ #  kafka-schema-registry:
+Index: python/src/testRedis.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import redis\nimport xxhash\nimport logging\nfrom datetime import datetime as dt\nfrom kafka import KafkaConsumer, KafkaProducer, KafkaClient, TopicPartition\nimport json\nfrom confluent_kafka import avro\nfrom confluent_kafka.avro import AvroProducer\nfrom confluent_kafka.avro.cached_schema_registry_client import CachedSchemaRegistryClient\nfrom confluent_kafka.avro.serializer import (SerializerError,  # noqa\n                                             KeySerializerError,\n                                             ValueSerializerError)\nfrom confluent_kafka.avro.serializer.message_serializer import MessageSerializer\nimport time\nimport os\nimport datetime\n\nconfig = {\n    'kafka_server': 'kafka1',\n    'kafka_port': '9092',\n    'kafka_schema': 'kafka-schema-registry',\n    'kafka_schema_port': '8081',\n    'kafka_zoo': 'zoo1',\n    'db_host': 'redis',\n    'db_port': 6379,\n    'db_id' : 1,\n    'db_pwd': 'redis123',\n    'topic' : 'file-topic',\n}\n\nschemaSF = '''{\n              \"type\":\"record\",\n              \"name\":\"Farming\",\n              \"namespace\":\"nis.dev.validator.avro\",\n              \"fields\":[\n                {\n                  \"name\": \"term_id\",\n                  \"type\": \"long\", \n                  \"default\" : \"NONE\"\n                },\n                {\n                  \"name\": \"time_platform\",\n                  \"type\": {\n                    \"type\": \"long\",\n                    \"logicalType\": \"timestamp-millis\"\n                  }, \n                  \"default\" : \"NONE\"\n                },\n                {\n                  \"name\": \"time_device\",\n                  \"type\": {\n                    \"type\": \"long\",\n                    \"logicalType\": \"timestamp-millis\"\n                  }, \n                  \"default\" : \"NONE\"\n                },\n                {\n                  \"name\": \"activity_info\",\n                  \"type\": \"int\", \n                  \"default\" : \"NONE\"\n                },\n                {\n                  \"name\": \"image\",\n                  \"type\": \"string\", \n                  \"default\" : \"NONE\"\n                }\n              ]\n            }'''\n\nschemaSF2 = '''{\n              \"type\":\"record\",\n              \"name\":\"File\",\n              \"namespace\":\"com.hack.validator.model\",\n              \"fields\":[\n                {\n                  \"name\": \"time_platform\",\n                  \"type\": {\n                    \"type\": \"long\",\n                    \"logicalType\": \"timestamp-millis\"\n                  }, \n                  \"default\" : \"NONE\"\n                },\n                {\n                  \"name\": \"time_device\",\n                  \"type\": {\n                    \"type\": \"long\",\n                    \"logicalType\": \"timestamp-millis\"\n                  }, \n                  \"default\" : \"NONE\"\n                },\n                {\n                  \"name\": \"activity_info\",\n                  \"type\": \"int\", \n                  \"default\" : \"NONE\"\n                },\n                {\n                  \"name\": \"image\",\n                  \"type\": \"bytes\", \n                  \"default\" : \"NONE\"\n                }\n              ]\n            }'''\n\nschemaSF3 = '''{\n  \"type\": \"record\",\n  \"name\": \"File\",\n  \"namespace\": \"com.hack.validator.model\",\n  \"fields\": [\n    {\n      \"name\": \"timePlatform\",\n      \"type\": {\n        \"type\": \"long\",\n        \"logicalType\": \"timestamp-millis\"\n      },\n    \"default\" : 1\n    },\n    {\n      \"name\": \"timeDevice\",\n      \"type\": {\n        \"type\": \"long\",\n        \"logicalType\": \"timestamp-millis\"\n      },\n    \"default\" : 1\n    },\n    {\n      \"name\": \"activityInfo\",\n      \"type\": \"int\",\n      \"default\" : 1\n    },\n    {\n      \"name\": \"image\",\n      \"type\": \"bytes\"\n    }\n  ]\n}'''\n\nrawData2 = {\"timePlatform\": 1527685363267, \"timeDevice\": 1527685363266, \"activityInfo\": 303, \"image\": \"test\" }\n\n\nlogging.basicConfig(level=logging.INFO)\nlog = logging.getLogger('kafkaTest')\nr = redis.StrictRedis(host=config.get('db_host'), port=config.get('db_port'), db=config.get('db_id'), password=config.get('db_pwd'))\nconsumer = KafkaConsumer(bootstrap_servers=config.get('kafka_server') + \":\" + config.get('kafka_port'),\n                         auto_offset_reset='earliest',\n                         consumer_timeout_ms=1000)\n# schema_registry = CachedSchemaRegistryClient(url='http://' + config.get('kafka_schema') + ':' + config.get('kafka_schema_port'))\n# serializer = MessageSerializer(schema_registry)\n# value_schema = avro.loads(schemaSF3)\n# avroProducer = AvroProducer({\n#     'bootstrap.servers': config.get('kafka_server'),\n#     'schema.registry.url': 'http://' + config.get('kafka_schema') + ':' + config.get('kafka_schema_port'),\n#     'message.max.bytes': 15000000\n# }, default_value_schema=value_schema)\nproducer = KafkaProducer(bootstrap_servers=config.get('kafka_server') + ':9092')\n\nstart_time = time.time()\n#device_time_device = 1530523171000\n#device_time_device_utc = datetime.fromtimestamp(int(device_time_device / 1000)).strftime('%Y-%m-%dT%H:%M:%SZ')\n\n\n\n\ndef insertValue(value):\n    digest = xxhash.xxh64(str(value)).hexdigest()\n    datet = dt.utcnow().strftime(\"%s\")\n    #print (\"[insertValue] digest: \" + str(digest) + \" date: \" + str(datet))\n    r.set(digest,datet)\n\ndef getValue(value):\n    digest = xxhash.xxh64(value).hexdigest()\n    print (\"[getValue] digest: \" + str(digest) + \" value: \" + str(r.get(digest)))\n\ndef checkValue(value):\n    digest = xxhash.xxh64(value).hexdigest()\n    result = r.exists(\"av\")\n    print (\"[checkValue] digest: \" + str(digest) + \" result: \" + str(result))\n    return result\n\ndef checkInsert(value):\n    #print (\"[checkInsert] value: \" + str(value))\n    digest = xxhash.xxh64(str(value)).hexdigest()\n    result = r.exists(digest)\n    if (result == 0):\n        #print (\"[checkInsert] digest: \" + str(digest) + \" not exist\")\n        insertValue(value)\n\ndef keys():\n    keys = r.keys()\n    vals = r.mget(keys)\n    kv = zip(keys, vals)\n    print (kv)\n\ndef keysCount():\n    le = len(r.keys())\n    print (\"[keysCount] \" + str(le))\n\ndef flush():\n    r.flushdb()\n\ndef bgsave():\n    r.bgsave()\n\ndef deleteKey(value):\n    digest = xxhash.xxh64(value).hexdigest()\n    r.delete(digest)\n\ndef generateMessagesBig():\n    log.info(\"[generateMessagesBig] start\")\n    for i in xrange(10000):\n        with open('file2.json') as f:\n            data = json.load(f)\n            data['term_id'] = i\n            sendKafka(data)\n        #sendKafka(rawData2)\n    log.info(\"[generateMessagesBig] end\")\n    print(\"[generateMessagesBig] flush --- %s seconds ---\" % (time.time() - start_time))\n    avroProducer.flush()\n    print(\"[generateMessagesBig] --- %s seconds ---\" % (time.time() - start_time))\n\ndef create_topic(topic):\n\n    '''\n\n    Create topic\n\n    '''\n    import kafka\n\n    client = kafka.KafkaClient(hosts=config.get('kafka_server') + ':' + config.get('kafka_port'))\n    res = client.ensure_topic_exists(topic)\n    return res\n\ndef list():\n\n    '''\n\n    Kafka list topics\n\n    List exist topics\n\n    '''\n    log.debug(\"[KafkaDriver][list] list start\")\n    list = consumer.topics()\n    for topic in list:\n        log.debug(\"[KafkaDriver][list] topic: \" + str(topic))\n    log.debug(\"[KafkaDriver][list] topic: \" + str(topic))\n\ndef generateMessagesSmall():\n    '''\n\n    Generate small messages\n\n    '''\n    log.info(\"[generateMessagesSmall] start\")\n    for i in xrange(20000):\n        # rawData2['term_id'] = i\n        log.info(\"[generateMessagesSmall] rawData2: \" + str(rawData2))\n        sendKafka(rawData2)\n    log.info(\"[generateMessagesSmall] end\")\n    print(\"[generateMessagesSmall] flush --- %s seconds ---\" % (time.time() - start_time))\n    producer.flush()\n    print(\"[generateMessagesSmall] --- %s seconds ---\" % (time.time() - start_time))\n\ndef sendKafkaAvro(msg):\n    '''\n\n    Send message to topic\n\n    '''\n\n    #res = avroProducer.produce(topic=config.get('topic'), value=msg)\n    log.debug(\"[KafkaDriver][send] produce result: \" + str(res))\n    #time.sleep(1)\n\ndef sendKafka(msg):\n    '''\n\n    Send message to topic\n\n    '''\n    log.debug(\"[sendKafka][send] msg: \" + str(msg))\n    res = producer.send(config.get('topic'), key=None, value=str(msg))\n    log.debug(\"[sendKafka][send] produce result: \" + str(res))\n    #time.sleep(1)\n\ndef getMessages():\n    '''\n\n    Get messages from topic and send to redis\n\n    '''\n    log.info(\"[getMessages] start\")\n\n    partition = TopicPartition(config.get('topic'), 0)\n    log.info(\"[getMessages] assign\")\n    consumer.assign([partition])\n    consumer.seek_to_beginning(partition)\n    log.info(\"[getMessages] seek_to_beginning\")\n\n    for msg in consumer:\n        #message = serializer.decode_message(msg.value)\n        #message = json.dumps(message, indent=4, sort_keys=True, default=outputJSON)\n        #del message['term_id']\n        #log.info(\"[KafkaDriver][read_from_offset] avro message: \" + str(message))\n        #ret = message\n        #log.info(\"[getMessages] msg.serialized_value_size: \" + str(msg.serialized_value_size) + \" msg.offset: \" + str(msg.offset) + \" msg.checksum: \" + str(msg.checksum))\n        checkInsert(msg.value)\n        #checkInsert(message)\n    log.info('[getMessages] end')\n\ndef delete_topic(topic=None, server='zoo1'):\n\n    '''\n\n    Delete topic\n\n    '''\n\n    cmd = '/nis-test/bin/kafka_2.12-1.1.0/bin/kafka-topics.sh --delete --topic ' + topic + ' --zookeeper ' + server\n    logging.debug('[KafkaDriver][delete_topic] cmd: ' + str(cmd))\n    ret = os.system(cmd)\n    logging.debug('[KafkaDriver][delete_topic] ret: ' + str(ret))\n    #assert ret == 0\n    return ret\n\ndef get_last_offset():\n\n    '''\n\n    Kafka get last offset\n\n    Get last message offset\n\n    '''\n\n    tp = TopicPartition(config.get('topic'), 0)\n    consumer.assign([tp])\n    consumer.seek_to_end(tp)\n    last_offset = consumer.position(tp)\n    logging.info(\"[KafkaDriver][get_last_offset] last_offset: \" + str(last_offset))\n    #consumer.close(autocommit=False)\n\ndef testGetMessages():\n    '''\n\n    Testing get messages\n\n    '''\n    flush()\n    getMessages()\n    log.info(\"get keys\")\n    print(\"--- %s seconds ---\" % (time.time() - start_time))\n    keysCount()\n    print(\"--- %s seconds ---\" % (time.time() - start_time))\n    get_last_offset()\n    consumer.close()\n\ndef testGenerateMessages():\n    '''\n\n    Testing generating messages\n\n    '''\n    #delete_topic(config.get('topic'))\n    print(\"[generateMessagesSmall] --- %s seconds ---\" % (time.time() - start_time))\n    generateMessagesSmall()\n    print(\"[get_last_offset] --- %s seconds ---\" % (time.time() - start_time))\n    get_last_offset()\n\n\ntestGenerateMessages()\n#testGetMessages()\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- python/src/testRedis.py	(revision ebb37c326084d03ac73c3d4462edf39bc8056d23)
++++ python/src/testRedis.py	(date 1571932842479)
+@@ -26,6 +26,19 @@
+     'db_id' : 1,
+     'db_pwd': 'redis123',
+     'topic' : 'file-topic',
++    'topic2' : 'input'
++}
++config2 = {
++    'kafka_server': '45.12.236.20:9093,45.12.236.21:9093,45.12.236.34:9093',
++    'kafka_port': '9093',
++    'kafka_zoo': '45.12.236.20:2185',
++    'db_host': 'redis',
++    'db_port': 6379,
++    'db_id' : 1,
++    'db_pwd': 'redis123',
++    'topic' : 'input',
++    'topic2' : 'input',
++    'topic3' : 'team3-test-output'
+ }
+ 
+ schemaSF = '''{
+@@ -143,6 +156,21 @@
+ consumer = KafkaConsumer(bootstrap_servers=config.get('kafka_server') + ":" + config.get('kafka_port'),
+                          auto_offset_reset='earliest',
+                          consumer_timeout_ms=1000)
++#45.12.236.20:9093,45.12.236.21:9093,45.12.236.34:9093
++
++consumer2 = KafkaConsumer(bootstrap_servers=["45.12.236.20:9093","45.12.236.21:9093","45.12.236.34:9093"],
++                         group_id='team3developer',
++                         auto_offset_reset='earliest',
++                         consumer_timeout_ms=1000,
++                         security_protocol='SSL',
++                         ssl_check_hostname=False,
++                         ssl_cafile='CARoot.pem',
++                         ssl_certfile='certificate.pem',
++                         ssl_keyfile='key.pem',
++                          ssl_password='LVe823ycKzdQ')
++#from pykafka import KafkaClient,SslConfig
++#config = SslConfig(cafile='D:\cacerts',password='password')
++
+ # schema_registry = CachedSchemaRegistryClient(url='http://' + config.get('kafka_schema') + ':' + config.get('kafka_schema_port'))
+ # serializer = MessageSerializer(schema_registry)
+ # value_schema = avro.loads(schemaSF3)
+@@ -152,7 +180,13 @@
+ #     'message.max.bytes': 15000000
+ # }, default_value_schema=value_schema)
+ producer = KafkaProducer(bootstrap_servers=config.get('kafka_server') + ':9092')
+-
++producer2 = KafkaProducer(bootstrap_servers=["45.12.236.20:9093","45.12.236.21:9093","45.12.236.34:9093"],
++                          security_protocol='SSL',
++                          ssl_check_hostname=False,
++                          ssl_cafile='CARoot.pem',
++                          ssl_certfile='certificate.pem',
++                          ssl_keyfile='key.pem',
++                          ssl_password='LVe823ycKzdQ')
+ start_time = time.time()
+ #device_time_device = 1530523171000
+ #device_time_device_utc = datetime.fromtimestamp(int(device_time_device / 1000)).strftime('%Y-%m-%dT%H:%M:%SZ')
+@@ -176,13 +210,14 @@
+     print ("[checkValue] digest: " + str(digest) + " result: " + str(result))
+     return result
+ 
+-def checkInsert(value):
++def checkInsert(msg):
+     #print ("[checkInsert] value: " + str(value))
+-    digest = xxhash.xxh64(str(value)).hexdigest()
++    digest = xxhash.xxh64(str(msg.value)).hexdigest()
+     result = r.exists(digest)
+     if (result == 0):
+         #print ("[checkInsert] digest: " + str(digest) + " not exist")
+-        insertValue(value)
++        insertValue(msg.value)
++        sendKafka(msg)
+ 
+ def keys():
+     keys = r.keys()
+@@ -214,7 +249,7 @@
+         #sendKafka(rawData2)
+     log.info("[generateMessagesBig] end")
+     print("[generateMessagesBig] flush --- %s seconds ---" % (time.time() - start_time))
+-    avroProducer.flush()
++    #avroProducer.flush()
+     print("[generateMessagesBig] --- %s seconds ---" % (time.time() - start_time))
+ 
+ def create_topic(topic):
+@@ -279,7 +314,7 @@
+ 
+     '''
+     log.debug("[sendKafka][send] msg: " + str(msg))
+-    res = producer.send(config.get('topic'), key=None, value=str(msg))
++    res = producer2.send(config.get('topic3'), key=None, value=str(msg))
+     log.debug("[sendKafka][send] produce result: " + str(res))
+     #time.sleep(1)
+ 
+@@ -291,20 +326,20 @@
+     '''
+     log.info("[getMessages] start")
+ 
+-    partition = TopicPartition(config.get('topic'), 0)
++    partition = TopicPartition(config2.get('topic'), 0)
+     log.info("[getMessages] assign")
+-    consumer.assign([partition])
+-    consumer.seek_to_beginning(partition)
++    consumer2.assign([partition])
++    consumer2.seek_to_beginning(partition)
+     log.info("[getMessages] seek_to_beginning")
+ 
+-    for msg in consumer:
++    for msg in consumer2:
+         #message = serializer.decode_message(msg.value)
+         #message = json.dumps(message, indent=4, sort_keys=True, default=outputJSON)
+         #del message['term_id']
+         #log.info("[KafkaDriver][read_from_offset] avro message: " + str(message))
+         #ret = message
+         #log.info("[getMessages] msg.serialized_value_size: " + str(msg.serialized_value_size) + " msg.offset: " + str(msg.offset) + " msg.checksum: " + str(msg.checksum))
+-        checkInsert(msg.value)
++        checkInsert(msg)
+         #checkInsert(message)
+     log.info('[getMessages] end')
+ 
+@@ -333,10 +368,10 @@
+ 
+     '''
+ 
+-    tp = TopicPartition(config.get('topic'), 0)
+-    consumer.assign([tp])
+-    consumer.seek_to_end(tp)
+-    last_offset = consumer.position(tp)
++    tp = TopicPartition(config2.get('topic'), 0)
++    consumer2.assign([tp])
++    consumer2.seek_to_end(tp)
++    last_offset = consumer2.position(tp)
+     logging.info("[KafkaDriver][get_last_offset] last_offset: " + str(last_offset))
+     #consumer.close(autocommit=False)
+ 
+@@ -368,5 +403,7 @@
+     get_last_offset()
+ 
+ 
+-testGenerateMessages()
++#testGenerateMessages()
+ #testGetMessages()
++get_last_offset()
++
+Index: validator/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd\">\n    <modelVersion>4.0.0</modelVersion>\n    <parent>\n        <groupId>org.springframework.boot</groupId>\n        <artifactId>spring-boot-starter-parent</artifactId>\n        <version>2.1.8.RELEASE</version>\n        <relativePath/> <!-- lookup parent from repository -->\n    </parent>\n    <groupId>com.hack</groupId>\n    <artifactId>hack-validator</artifactId>\n    <packaging>jar</packaging>\n    <version>0.0.1-SNAPSHOT</version>\n    <name>hack-validator</name>\n    <description>hack-validator</description>\n\n    <properties>\n        <java.version>11</java.version>\n<!--        <maven.compiler.source>1.6</maven.compiler.source>-->\n<!--        <maven.compiler.target>1.6</maven.compiler.target>-->\n        <sleuth.version>2.1.4.RELEASE</sleuth.version>\n\n    </properties>\n\n    <dependencies>\n        <dependency>\n            <groupId>org.springframework.cloud</groupId>\n            <artifactId>spring-cloud-starter-sleuth</artifactId>\n            <version>2.1.4.RELEASE</version>\n        </dependency>\n        <!-- SPRING -->\n        <dependency>\n            <groupId>org.springframework.boot</groupId>\n            <artifactId>spring-boot-starter-web</artifactId>\n        </dependency>\n        <dependency>\n            <groupId>org.springframework.boot</groupId>\n            <artifactId>spring-boot-starter-actuator</artifactId>\n        </dependency>\n        <dependency>\n            <groupId>org.springframework.boot</groupId>\n            <artifactId>spring-boot-starter</artifactId>\n        </dependency>\n        <dependency>\n            <groupId>org.springframework.kafka</groupId>\n            <artifactId>spring-kafka</artifactId>\n        </dependency>\n\n        <!-- CLOUD -->\n        <dependency>\n            <groupId>org.springframework.cloud</groupId>\n            <artifactId>spring-cloud-stream-binder-kafka</artifactId>\n            <version>2.2.1.RELEASE</version>\n        </dependency>\n        <dependency>\n            <groupId>org.springframework.cloud</groupId>\n            <artifactId>spring-cloud-stream-schema</artifactId>\n            <version>2.2.1.RELEASE</version>\n        </dependency>\n\n        <dependency>\n            <groupId>org.liba2</groupId>\n            <artifactId>liba2</artifactId>\n            <version>1.0</version>\n            <scope>system</scope>\n            <systemPath>${project.basedir}/libs/liba2-1.0-SNAPSHOT.jar</systemPath>\n        </dependency>\n        <!-- LOGGING -->\n        <!-- Logback dependencies -->\n        <dependency>\n            <groupId>ch.qos.logback</groupId>\n            <artifactId>logback-classic</artifactId>\n            <version>${logback.version}</version>\n        </dependency>\n        <dependency>\n            <groupId>ch.qos.logback</groupId>\n            <artifactId>logback-core</artifactId>\n            <version>${logback.version}</version>\n        </dependency>\n        <dependency>\n            <groupId>ch.qos.logback</groupId>\n            <artifactId>logback-access</artifactId>\n            <version>${logback.version}</version>\n        </dependency>\n\n        <!-- TEST -->\n        <dependency>\n            <groupId>org.springframework.boot</groupId>\n            <artifactId>spring-boot-starter-test</artifactId>\n            <scope>test</scope>\n        </dependency>\n        <dependency>\n            <groupId>org.springframework.kafka</groupId>\n            <artifactId>spring-kafka-test</artifactId>\n            <scope>test</scope>\n        </dependency>\n        <dependency>\n            <groupId>org.junit.jupiter</groupId>\n            <artifactId>junit-jupiter</artifactId>\n            <version>5.5.2</version>\n            <scope>test</scope>\n        </dependency>\n    </dependencies>\n\n    <repositories>\n        <repository>\n            <id>confluent</id>\n            <url>https://packages.confluent.io/maven/</url>\n        </repository>\n    </repositories>\n\n    <build>\n        <finalName>hack-validator</finalName>\n        <plugins>\n            <plugin>\n                <groupId>org.springframework.boot</groupId>\n                <artifactId>spring-boot-maven-plugin</artifactId>\n            </plugin>\n        </plugins>\n    </build>\n\n</project>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- validator/pom.xml	(revision ebb37c326084d03ac73c3d4462edf39bc8056d23)
++++ validator/pom.xml	(date 1571921999461)
+@@ -64,7 +64,7 @@
+             <artifactId>liba2</artifactId>
+             <version>1.0</version>
+             <scope>system</scope>
+-            <systemPath>${project.basedir}/libs/liba2-1.0-SNAPSHOT.jar</systemPath>
++            <systemPath>${pom.basedir}/libs/liba2-1.0-SNAPSHOT.jar</systemPath>
+         </dependency>
+         <!-- LOGGING -->
+         <!-- Logback dependencies -->

@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4f628317-9983-4c2e-ae17-444a522ec9b6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/liba2/liba2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/validator/src/main/java/com/hack/validator/liba2/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/validator/src/main/java/com/hack/validator/liba2/Duplicator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/validator/src/main/java/liba2/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/validator/src/main/java/liba2/Duplicator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/validator/src/main/resources/liba2-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/validator/team3developer.jks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liba2/src/main/resources/property.properties" beforeDir="false" afterPath="$PROJECT_DIR$/liba2/src/main/resources/property.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/src/testRedis.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/src/testRedis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/validator/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/validator/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/validator/src/main/java/com/hack/validator/listener/FileConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/validator/src/main/java/com/hack/validator/listener/FileConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/validator/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/validator/src/main/resources/application.yml" afterDir="false" />
+    </list>
+    <list id="7e12c79a-8c88-425a-b0c4-00281891dfe9" name="изменения" comment="" />
+    <list id="d93b389f-d3c2-4e20-8ddf-4fbe078e355c" name="изменения2" comment="">
+      <change afterPath="$PROJECT_DIR$/python/src/CARoot.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python/src/cert_and_key.p12" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python/src/certificate.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python/src/key.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python/src/team3developer.jks" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python/src/team3developer.jks.old" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/validator/src/main/resources/property.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liba2/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/liba2/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/bin/kafka_2.12-1.1.0/bin/kafka-run-class.sh" beforeDir="false" afterPath="$PROJECT_DIR$/python/bin/kafka_2.12-1.1.0/bin/kafka-run-class.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/src/testRedis.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/src/testRedis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/validator/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/validator/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/validator/libs/liba2-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/validator/libs/liba2-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/validator/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/validator/pom.xml" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/validator/pom.xml">
+      <ranges>
+        <range start1="17" end1="17" start2="17" end2="41" changelist="4f628317-9983-4c2e-ae17-444a522ec9b6" />
+        <range start1="31" end1="32" start2="55" end2="62" changelist="4f628317-9983-4c2e-ae17-444a522ec9b6" />
+        <range start1="96" end1="97" start2="126" end2="127" changelist="d93b389f-d3c2-4e20-8ddf-4fbe078e355c" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/python/src/testRedis.py">
+      <ranges>
+        <range start1="28" end1="28" start2="28" end2="41" changelist="d93b389f-d3c2-4e20-8ddf-4fbe078e355c" />
+        <range start1="142" end1="143" start2="155" end2="162" changelist="d93b389f-d3c2-4e20-8ddf-4fbe078e355c" />
+        <range start1="144" end1="145" start2="163" end2="173" changelist="d93b389f-d3c2-4e20-8ddf-4fbe078e355c" />
+        <range start1="153" end1="155" start2="181" end2="189" changelist="d93b389f-d3c2-4e20-8ddf-4fbe078e355c" />
+        <range start1="178" end1="179" start2="212" end2="213" changelist="d93b389f-d3c2-4e20-8ddf-4fbe078e355c" />
+        <range start1="180" end1="181" start2="214" end2="215" changelist="d93b389f-d3c2-4e20-8ddf-4fbe078e355c" />
+        <range start1="184" end1="185" start2="218" end2="220" changelist="d93b389f-d3c2-4e20-8ddf-4fbe078e355c" />
+        <range start1="216" end1="217" start2="251" end2="252" changelist="d93b389f-d3c2-4e20-8ddf-4fbe078e355c" />
+        <range start1="232" end1="246" start2="267" end2="281" changelist="4f628317-9983-4c2e-ae17-444a522ec9b6" />
+        <range start1="281" end1="282" start2="316" end2="317" changelist="d93b389f-d3c2-4e20-8ddf-4fbe078e355c" />
+        <range start1="293" end1="294" start2="328" end2="329" changelist="d93b389f-d3c2-4e20-8ddf-4fbe078e355c" />
+        <range start1="295" end1="297" start2="330" end2="332" changelist="d93b389f-d3c2-4e20-8ddf-4fbe078e355c" />
+        <range start1="299" end1="300" start2="334" end2="335" changelist="d93b389f-d3c2-4e20-8ddf-4fbe078e355c" />
+        <range start1="306" end1="307" start2="341" end2="342" changelist="d93b389f-d3c2-4e20-8ddf-4fbe078e355c" />
+        <range start1="335" end1="339" start2="370" end2="374" changelist="d93b389f-d3c2-4e20-8ddf-4fbe078e355c" />
+        <range start1="340" end1="341" start2="375" end2="376" changelist="4f628317-9983-4c2e-ae17-444a522ec9b6" />
+        <range start1="354" end1="356" start2="389" end2="391" changelist="4f628317-9983-4c2e-ae17-444a522ec9b6" />
+        <range start1="370" end1="372" start2="405" end2="409" changelist="d93b389f-d3c2-4e20-8ddf-4fbe078e355c" />
+      </ranges>
+    </file>
+  </component>
+  <component name="ProjectId" id="1RHRY9krAGPb93f52Pmoqt3G6bz" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569315527900" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/python" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/python/src" />
+      <recent name="$PROJECT_DIR$/python" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/python" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/bin" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Docker.docker-compose.yml.validator2\: Compose Deployment">
+    <configuration default="true" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false">
+      <setting name="replType" value="NREPL" />
+      <setting name="execution" value="LEININGEN" />
+      <module name="" />
+      <setting name="jvmArgs" value="" />
+      <setting name="parameters" value="" />
+      <setting name="workingDir" value="" />
+      <setting name="profiles" value="" />
+      <setting name="aliases" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="ClojureREPL" factoryName="Remote" activateToolWindowBeforeRun="false">
+      <setting name="host" value="" />
+      <setting name="port" value="0" />
+      <setting name="replType" value="0" />
+      <module name="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="hack" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.validator2\: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="validator2\" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.docker-compose.yml.validator2\: Compose Deployment" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4f628317-9983-4c2e-ae17-444a522ec9b6" name="Default Changelist" comment="" />
+      <changelist id="7e12c79a-8c88-425a-b0c4-00281891dfe9" name="изменения" comment="" />
+      <changelist id="d93b389f-d3c2-4e20-8ddf-4fbe078e355c" name="изменения2" comment="" />
+      <created>1568795066313</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1568795066313</updated>
+    </task>
+    <task id="LOCAL-00001" summary="изменения">
+      <created>1571918709795</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1571918709795</updated>
+    </task>
+    <task id="LOCAL-00002" summary="изменения2">
+      <created>1571933535051</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1571933535051</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="изменения" />
+    <MESSAGE value="изменения2" />
+    <option name="LAST_COMMIT_MESSAGE" value="изменения2" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Python</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Python 3.7 interpreter library</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>Python 3.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>hack</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

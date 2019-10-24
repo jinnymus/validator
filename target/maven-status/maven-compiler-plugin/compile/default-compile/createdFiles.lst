@@ -1,0 +1,6 @@
+com/hack/validator/HackConsumerApplication.class
+com/hack/validator/liba2/Application.class
+com/hack/validator/liba2/Duplicator.class
+com/hack/validator/serializer/JavaSerializer.class
+com/hack/validator/listener/FileConsumer.class
+com/hack/validator/config/SchemaRegistryConfig.class

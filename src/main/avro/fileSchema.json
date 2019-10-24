@@ -1,0 +1,23 @@
+{
+  "type": "record",
+  "name": "File",
+  "namespace": "com.hack.validator.model",
+  "fields": [
+    {
+      "name": "timePlatform",
+      "type": "long"
+    },
+    {
+      "name": "timeDevice",
+      "type": "long"
+    },
+    {
+      "name": "activityInfo",
+      "type": "int"
+    },
+    {
+      "name": "image",
+      "type": "bytes"
+    }
+  ]
+}

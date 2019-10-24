@@ -1,0 +1,37 @@
+spring:
+  kafka:
+    bootstrap-servers: 45.12.236.20:9093,45.12.236.21:9093,45.12.236.34:9093
+    client-id: ${random.uuid}
+    group.id: team3developer
+    consumer:
+      group.id: team3developer
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: input
+          content-type: application/text
+          group: team3developer
+        output:
+          destination: team3-test-output
+          content-type: text/plain
+      kafka:
+        binder:
+          configuration:
+            security.protocol: SSL
+            ssl.truststore.location: team3developer.jks
+            ssl.truststore.password: LVe823ycKzdQ
+            ssl.truststore.type: JKS
+            ssl.keystore.location: team3developer.jks
+            ssl.keystore.password: LVe823ycKzdQ
+            ssl.key.password: LVe823ycKzdQ
+            ssl.endpoint.identification.algorithm:
+          producer-properties:
+           # key.serializer: org.apache.kafka.common.serialization.StringSerializer
+            key.serializer: com.hack.validator.serializer.JavaSerializer
+            key.serializer.encoding: UTF8
+            value.serializer: com.hack.validator.serializer.JavaSerializer
+          consumer-properties:
+            key.deserializer: org.apache.kafka.common.serialization.StringDeserializer
+            value.deserializer: org.apache.kafka.common.serialization.StringDeserializer
+            group.id: team3developer
