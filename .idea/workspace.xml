@@ -1,37 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4f628317-9983-4c2e-ae17-444a522ec9b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/liba2/liba2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/validator/src/main/java/com/hack/validator/liba2/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/validator/src/main/java/com/hack/validator/liba2/Duplicator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/validator/src/main/java/liba2/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/validator/src/main/java/liba2/Duplicator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/validator/src/main/resources/liba2-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/validator/team3developer.jks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liba2/src/main/resources/property.properties" beforeDir="false" afterPath="$PROJECT_DIR$/liba2/src/main/resources/property.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/src/testRedis.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/src/testRedis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/validator/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/validator/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/validator/src/main/java/com/hack/validator/listener/FileConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/validator/src/main/java/com/hack/validator/listener/FileConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/validator/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/validator/src/main/resources/application.yml" afterDir="false" />
-    </list>
-    <list id="7e12c79a-8c88-425a-b0c4-00281891dfe9" name="изменения" comment="" />
-    <list id="d93b389f-d3c2-4e20-8ddf-4fbe078e355c" name="изменения2" comment="">
-      <change afterPath="$PROJECT_DIR$/python/src/CARoot.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/src/cert_and_key.p12" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/src/certificate.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/src/key.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/src/team3developer.jks" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/src/team3developer.jks.old" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/validator/src/main/resources/property.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liba2/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/liba2/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/bin/kafka_2.12-1.1.0/bin/kafka-run-class.sh" beforeDir="false" afterPath="$PROJECT_DIR$/python/bin/kafka_2.12-1.1.0/bin/kafka-run-class.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/src/testRedis.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/src/testRedis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/validator/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/validator/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/validator/libs/liba2-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/validator/libs/liba2-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/validator/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/validator/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="9ea39c14-b64f-4610-b9d7-e85a85116bd4" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,39 +18,8 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/validator/pom.xml">
-      <ranges>
-        <range start1="17" end1="17" start2="17" end2="41" changelist="4f628317-9983-4c2e-ae17-444a522ec9b6" />
-        <range start1="31" end1="32" start2="55" end2="62" changelist="4f628317-9983-4c2e-ae17-444a522ec9b6" />
-        <range start1="96" end1="97" start2="126" end2="127" changelist="d93b389f-d3c2-4e20-8ddf-4fbe078e355c" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/python/src/testRedis.py">
-      <ranges>
-        <range start1="28" end1="28" start2="28" end2="41" changelist="d93b389f-d3c2-4e20-8ddf-4fbe078e355c" />
-        <range start1="142" end1="143" start2="155" end2="162" changelist="d93b389f-d3c2-4e20-8ddf-4fbe078e355c" />
-        <range start1="144" end1="145" start2="163" end2="173" changelist="d93b389f-d3c2-4e20-8ddf-4fbe078e355c" />
-        <range start1="153" end1="155" start2="181" end2="189" changelist="d93b389f-d3c2-4e20-8ddf-4fbe078e355c" />
-        <range start1="178" end1="179" start2="212" end2="213" changelist="d93b389f-d3c2-4e20-8ddf-4fbe078e355c" />
-        <range start1="180" end1="181" start2="214" end2="215" changelist="d93b389f-d3c2-4e20-8ddf-4fbe078e355c" />
-        <range start1="184" end1="185" start2="218" end2="220" changelist="d93b389f-d3c2-4e20-8ddf-4fbe078e355c" />
-        <range start1="216" end1="217" start2="251" end2="252" changelist="d93b389f-d3c2-4e20-8ddf-4fbe078e355c" />
-        <range start1="232" end1="246" start2="267" end2="281" changelist="4f628317-9983-4c2e-ae17-444a522ec9b6" />
-        <range start1="281" end1="282" start2="316" end2="317" changelist="d93b389f-d3c2-4e20-8ddf-4fbe078e355c" />
-        <range start1="293" end1="294" start2="328" end2="329" changelist="d93b389f-d3c2-4e20-8ddf-4fbe078e355c" />
-        <range start1="295" end1="297" start2="330" end2="332" changelist="d93b389f-d3c2-4e20-8ddf-4fbe078e355c" />
-        <range start1="299" end1="300" start2="334" end2="335" changelist="d93b389f-d3c2-4e20-8ddf-4fbe078e355c" />
-        <range start1="306" end1="307" start2="341" end2="342" changelist="d93b389f-d3c2-4e20-8ddf-4fbe078e355c" />
-        <range start1="335" end1="339" start2="370" end2="374" changelist="d93b389f-d3c2-4e20-8ddf-4fbe078e355c" />
-        <range start1="340" end1="341" start2="375" end2="376" changelist="4f628317-9983-4c2e-ae17-444a522ec9b6" />
-        <range start1="354" end1="356" start2="389" end2="391" changelist="4f628317-9983-4c2e-ae17-444a522ec9b6" />
-        <range start1="370" end1="372" start2="405" end2="409" changelist="d93b389f-d3c2-4e20-8ddf-4fbe078e355c" />
-      </ranges>
-    </file>
-  </component>
   <component name="ProjectId" id="1RHRY9krAGPb93f52Pmoqt3G6bz" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
@@ -92,16 +31,16 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/python/src" />
-      <recent name="$PROJECT_DIR$/python" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/python" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/bin" />
       <recent name="$PROJECT_DIR$/src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/python/src" />
+      <recent name="$PROJECT_DIR$/python" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -232,80 +171,5 @@
     <MESSAGE value="изменения" />
     <MESSAGE value="изменения2" />
     <option name="LAST_COMMIT_MESSAGE" value="изменения2" />
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>Python</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Python 3.7 interpreter library</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>Python 3.7</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>hack</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>
