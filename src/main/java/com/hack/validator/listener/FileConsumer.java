@@ -16,7 +16,7 @@ public class FileConsumer {
     @StreamListener(value = Processor.INPUT)
     @SendTo(value = Processor.OUTPUT)
     public String consume(String file) {
-        System.out.println("Received: " + file);
+        //System.out.println("Received: " + file);
         if (duplicator.isDuplicated(file)) {
             return null;
         }
