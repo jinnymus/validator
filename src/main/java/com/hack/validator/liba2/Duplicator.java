@@ -37,8 +37,8 @@ public class Duplicator {
 
         registry = new CollectorRegistry();
 
-        messagesCounter = Counter.build().name("hack_message_counts").help("Count of messages").labelNames("mk").create().register(registry);
-        duplicateCounter = Counter.build().name("hack_duplicate_counts").help("Count of duplicate messages").labelNames("dk").create().register(registry);
+        messagesCounter = Counter.build().name("hack_message_counts").help("Count of messages").create().register(registry);
+        duplicateCounter = Counter.build().name("hack_duplicate_counts").help("Count of duplicate messages").create().register(registry);
         msgProcessingDuration = Gauge.build().name("hack_msg_process_dur").help("Message processing duration").register(registry);
         duplicationCheckingDuration = Gauge.build().name("hack_msg_dup_check_dur").help("Message duplication checking duration").register(registry);
         writingDuration = Gauge.build().name("hack_msg_wr_dur").help("Message writing duration").register(registry);
