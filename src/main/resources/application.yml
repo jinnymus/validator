@@ -3,16 +3,16 @@ spring:
   kafka:
     bootstrap-servers: 45.12.236.20:9093,45.12.236.21:9093,45.12.236.34:9093
     client-id: ${random.uuid}
-    group.id: team3developer23
+    group.id: team3developer24
     consumer:
-      group.id: team3developer23
+      group.id: team3developer24
   cloud:
     stream:
       bindings:
         input:
           destination: input
           content-type: application/text
-          group: team3developer23
+          group: team3developer24
           #concurrency: 1
         output:
           destination: team3-test-output
@@ -38,4 +38,4 @@ spring:
           consumer-properties:
             key.deserializer: org.apache.kafka.common.serialization.StringDeserializer
             value.deserializer: org.apache.kafka.common.serialization.StringDeserializer
-            group.id: team3developer23
+            group.id: team3developer24
