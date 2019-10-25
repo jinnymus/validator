@@ -37,11 +37,11 @@ public class Duplicator {
 
         registry = new CollectorRegistry();
 
-        messagesCounter = Counter.build().name("message_counts").help("Count of messages").create().register(registry);
-        duplicateCounter = Counter.build().name("duplicate_counts").help("Count of duplicate messages").register(registry);
-        msgProcessingDuration = Gauge.build().name("msg_process_dur").help("Message processing duration").register(registry);
-        duplicationCheckingDuration = Gauge.build().name("msg_dup_check_dur").help("Message duplication checking duration").register(registry);
-        writingDuration = Gauge.build().name("msg_wr_dur").help("Message writing duration").register(registry);
+        messagesCounter = Counter.build().name("hack_message_counts").help("Count of messages").create().register(registry);
+        duplicateCounter = Counter.build().name("hack_duplicate_counts").help("Count of duplicate messages").register(registry);
+        msgProcessingDuration = Gauge.build().name("hack_msg_process_dur").help("Message processing duration").register(registry);
+        duplicationCheckingDuration = Gauge.build().name("hack_msg_dup_check_dur").help("Message duplication checking duration").register(registry);
+        writingDuration = Gauge.build().name("hack_msg_wr_dur").help("Message writing duration").register(registry);
 
         try (InputStream is = getClass().getClassLoader().getResourceAsStream("property.properties")) {
             if (is == null) {
@@ -53,8 +53,8 @@ public class Duplicator {
             redisHost = properties.getProperty("redis.host");
             redisPort = Integer.valueOf(properties.getProperty("redis.port"));
 
-            prometheusHost = properties.getProperty("prometheus.host");
-            prometheusPort = Integer.valueOf(properties.getProperty("prometheus.port"));
+            prometheusHost = properties.getProperty("pushgateway.host");
+            prometheusPort = Integer.valueOf(properties.getProperty("pushgateway.port"));
 
             gateway = new PushGateway( prometheusHost + ":" + prometheusPort);
 
@@ -66,6 +66,7 @@ public class Duplicator {
         pool = new JedisPool(new GenericObjectPoolConfig(),redisHost, redisPort, 3000, "redis123");
     }
 
+
     public void push() {
         try {
             gateway.pushAdd(registry, "app");
@@ -74,8 +75,11 @@ public class Duplicator {
         }
     }
 
-    public boolean isDuplicated(String message) {
+    public void incmessagesCounter() {
         messagesCounter.inc();
+    }
+
+    public boolean isDuplicated(String message) {
         Gauge.Timer msgProcessingTimer = msgProcessingDuration.startTimer();
         long startTime = System.nanoTime();
         long hash = getHash(message);
