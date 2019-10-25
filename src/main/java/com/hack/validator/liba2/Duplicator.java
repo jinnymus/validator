@@ -114,12 +114,12 @@ public class Duplicator {
 
             resource.close();
             msgProcessingTimer.close();
-            return true;
+            return false;
         }
 
         msgProcessingTimer.close();
         resource.close();
-        return false;
+        return true;
     }
 
     private void writeInDb(long hash, Jedis resource) {
