@@ -63,7 +63,10 @@ public class Duplicator {
             throw new RuntimeException(ex);
         }
         //configure our pool connection
-        pool = new JedisPool(new GenericObjectPoolConfig(),redisHost, redisPort, 3000, "redis123");
+
+        GenericObjectPoolConfig poolConfig = new GenericObjectPoolConfig();
+        poolConfig.setMaxTotal(30);
+        pool = new JedisPool(poolConfig, redisHost, redisPort, 3000, "redis123");
     }
 
 
