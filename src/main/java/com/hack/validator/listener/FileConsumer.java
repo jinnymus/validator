@@ -18,6 +18,7 @@ public class FileConsumer {
     public String consume(String file) {
         //System.out.println("Received: " + file);
         if (duplicator.isDuplicated(file)) {
+            duplicator.incduplicateCounter();
             return null;
         }
         duplicator.incmessagesCounter();

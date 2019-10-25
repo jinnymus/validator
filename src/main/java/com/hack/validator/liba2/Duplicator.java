@@ -82,6 +82,10 @@ public class Duplicator {
         messagesCounter.inc();
     }
 
+    public void incduplicateCounter() {
+        duplicateCounter.inc();
+    }
+
     public boolean isDuplicated(String message) {
         Gauge.Timer msgProcessingTimer = msgProcessingDuration.startTimer();
         long startTime = System.nanoTime();
@@ -114,7 +118,6 @@ public class Duplicator {
         }
 
         msgProcessingTimer.close();
-        duplicateCounter.inc();
         resource.close();
         return false;
     }
