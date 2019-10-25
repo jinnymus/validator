@@ -12,7 +12,7 @@ spring:
         input:
           destination: input
           content-type: application/text
-          group: team3developer11
+          group: team3developer17
           concurrency: 15
         output:
           destination: team3-test-output
@@ -38,4 +38,4 @@ spring:
           consumer-properties:
             key.deserializer: org.apache.kafka.common.serialization.StringDeserializer
             value.deserializer: org.apache.kafka.common.serialization.StringDeserializer
-            group.id: team3developer11
+            group.id: team3developer16
