@@ -66,7 +66,7 @@ public class Duplicator {
 
         GenericObjectPoolConfig poolConfig = new GenericObjectPoolConfig();
         poolConfig.setMaxTotal(30);
-        pool = new JedisPool(poolConfig, redisHost, redisPort, 3000, "redis123");
+        pool = new JedisPool(poolConfig, redisHost, redisPort, 3000);
     }
 
 
